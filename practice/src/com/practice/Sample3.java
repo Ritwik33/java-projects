@@ -1,6 +1,7 @@
 package com.practice;
 
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
@@ -13,6 +14,7 @@ public class Sample3 {
         Scanner sc = new Scanner(System.in);
         int num1 = sc.nextInt();
         System.out.println("first number is: "+num1);
+        sc.close();
 
         //input stream reader
         System.out.print("enter second number: ");
@@ -31,6 +33,5 @@ public class Sample3 {
             sum+=Integer.parseInt(value);
         }
         System.out.println("the sum is: "+sum);
-        sc.close();
     }
 }
