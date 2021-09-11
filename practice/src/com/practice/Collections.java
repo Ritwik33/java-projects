@@ -124,5 +124,8 @@ public class Collections {
         ts.add(5);
         ts.add(98);
         for(int i:ts) System.out.println(i);
+        System.out.println("\n");
+
+
     }
 }
