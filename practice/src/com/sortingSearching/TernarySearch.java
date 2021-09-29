@@ -8,6 +8,7 @@ public class TernarySearch {
         Scanner sc = new Scanner(System.in);
         arr = new int[size];
         for(int i = 0;i<size;i++) arr[i] = sc.nextInt();
+        sc.close();
     }
     int ternarySearch(int low, int high, int key) {
         if(low>high) return -1;
@@ -28,5 +29,6 @@ public class TernarySearch {
         TernarySearch obj = new TernarySearch(size);
         int key = sc.nextInt();
         System.out.println(obj.ternarySearch(0, size-1, key));
+        sc.close();
     }
 }
