@@ -7,21 +7,15 @@ import java.util.Scanner;
 
 public class LC441 {
     public int arrangeCoins(int n) {
-        int[] prefix = new int[n];
-        int a = 1;
-        for(int i = 0;i<n;i++) {
-            prefix[i] = a;
-            if(i > 0) prefix[i] += prefix[i-1];
-            a++;
-        }
-        int low = 0, high = n-1;
+        long low = 1, high = n;
         while(low<=high) {
-            int mid = low + (high-low)/2;
-            if(n == prefix[mid]) return mid+1;
-            else if(n < prefix[mid]) high = mid - 1;
-            else if(n > prefix[mid]) low = mid+1;
-        }
-        return low;
+            long mid = low + (high-low)/2;
+            long sum = (mid*(mid+1))/2;
+            if(n == sum) return (int)mid;
+            else if(n < sum) high = mid-1;
+            else if(n > sum) low = mid+1;
+         }
+        return (int)high;
     }
 
     public static void main(String[] args) {
